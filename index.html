@@ -94,6 +94,7 @@
             </div>
         </div>
     </div>
+
     <div class="modal" id="imageModal">
         <div class="modal-content">
             <h3>Fotoğraf Gönder</h3>
@@ -101,23 +102,47 @@
             <button class="modal-btn secondary" onclick="closeImageModal()">İptal</button>
         </div>
     </div>
+
     <input type="file" id="fileInput" accept="image/*" onchange="handleImageUpload(event)">
     <input type="file" id="profileInput" accept="image/*" onchange="handleProfileUpload(event)">
-    <script>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getDatabase, ref, push, onValue, remove, set } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+
+        // Firebase Yapılandırman
+        const firebaseConfig = {
+            apiKey: "AIzaSyBZYnpMlDoz2wnk9PnPrSr_usoSSq8Xkow",
+            authDomain: "berat-enes-sohbet.firebaseapp.com",
+            databaseURL: "https://berat-enes-sohbet-default-rtdb.europe-west1.firebasedatabase.app",
+            projectId: "berat-enes-sohbet",
+            storageBucket: "berat-enes-sohbet.appspot.com",
+            messagingSenderId: "661287110483",
+            appId: "1:661287110483:web:9bb02c8cd560dea964c3a6"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+        const messagesRef = ref(db, "mesajlar");
+        const profileRef = ref(db, "profiller");
+
         const USERS = {
             'berat1': { name: 'Berat', partner: 'Enes', theme: { primary: '#128C7E', headerBg: '#075E54', bg: '#E5DDD5', messageMe: '#DCF8C6', messagePartner: '#fff' }},
             'enes1': { name: 'Enes', partner: 'Berat', theme: { primary: '#EE5A6F', headerBg: '#EE5A6F', bg: '#FFE5E5', messageMe: '#FFD4D4', messagePartner: '#fff' }}
         };
+
+        let currentUser = null;
+
+        // Gün Sayacı
         function calculateDays() {
             const startDate = new Date('2025-01-09');
             const today = new Date();
             return Math.ceil(Math.abs(today - startDate) / (1000 * 60 * 60 * 24));
         }
         document.getElementById('dayCount').textContent = calculateDays();
-        let currentUser = null;
-        let messages = JSON.parse(localStorage.getItem('beratEnesMessages')) || [];
-        let profilePhotos = JSON.parse(localStorage.getItem('beratEnesPhotos')) || {};
-        function login() {
+
+        // Login İşlemi
+        window.login = function() {
             const input = document.getElementById('passwordInput').value.toLowerCase().trim();
             if (USERS[input]) {
                 currentUser = USERS[input];
@@ -129,127 +154,125 @@
                 document.getElementById('loginScreen').style.display = 'none';
                 document.getElementById('chatScreen').style.display = 'flex';
                 document.getElementById('chatTitle').textContent = currentUser.partner;
-                showMessages();
+                
+                loadMessages();
+                syncProfilePhoto();
             } else {
                 document.getElementById('errorMsg').style.display = 'block';
                 setTimeout(() => document.getElementById('errorMsg').style.display = 'none', 3000);
             }
         }
-        document.getElementById('passwordInput').addEventListener('keypress', function(e) { if (e.key === 'Enter') login(); });
-        function logout() {
+
+        document.getElementById('passwordInput').addEventListener('keypress', (e) => { if (e.key === 'Enter') login(); });
+
+        window.logout = function() {
             currentUser = null;
             document.getElementById('loginScreen').style.display = 'flex';
             document.getElementById('chatScreen').style.display = 'none';
             document.getElementById('passwordInput').value = '';
         }
-        function changeProfilePhoto() {
-            document.getElementById('profileInput').click();
-        }
-        function handleProfileUpload(event) {
+
+        // Profil Fotoğrafı İşlemleri
+        window.changeProfilePhoto = () => document.getElementById('profileInput').click();
+
+        window.handleProfileUpload = (event) => {
             const file = event.target.files[0];
             if (file) {
                 const reader = new FileReader();
-                reader.onload = function(e) {
-                    profilePhotos[currentUser.partner] = e.target.result;
-                    localStorage.setItem('beratEnesPhotos', JSON.stringify(profilePhotos));
-                    updateProfilePhoto();
+                reader.onload = (e) => {
+                    set(ref(db, "profiller/" + currentUser.name), e.target.result);
                 };
                 reader.readAsDataURL(file);
             }
         }
-        function updateProfilePhoto() {
-            const photoUrl = profilePhotos[currentUser.partner];
-            const photoEl = document.getElementById('profilePhoto');
-            if (photoUrl) {
-                photoEl.innerHTML = '<img src="' + photoUrl + '">';
-            } else {
-                photoEl.innerHTML = '<span id="profileEmoji">💕</span>';
-            }
+
+        function syncProfilePhoto() {
+            onValue(profileRef, (snapshot) => {
+                const data = snapshot.val();
+                if (data && data[currentUser.partner]) {
+                    document.getElementById('profilePhoto').innerHTML = `<img src="${data[currentUser.partner]}">`;
+                } else {
+                    document.getElementById('profilePhoto').innerHTML = '<span id="profileEmoji">💕</span>';
+                }
+            });
         }
-        function openImageModal() {
-            document.getElementById('imageModal').classList.add('active');
-        }
-        function closeImageModal() {
-            document.getElementById('imageModal').classList.remove('active');
-        }
-        function handleImageUpload(event) {
-            const file = event.target.files[0];
-            if (file && currentUser) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    sendImageMessage(e.target.result);
-                };
-                reader.readAsDataURL(file);
-            }
-            closeImageModal();
-        }
-        function sendImageMessage(imageUrl) {
-            const msg = {
-                id: Date.now(),
-                sender: currentUser.name,
-                type: 'image',
-                content: imageUrl,
-                time: new Date().toLocaleTimeString('tr-TR', {hour: '2-digit', minute:'2-digit'}),
-                date: new Date().toLocaleDateString('tr-TR')
-            };
-            messages.push(msg);
-            localStorage.setItem('beratEnesMessages', JSON.stringify(messages));
-            showMessages();
-        }
-        function sendMessage() {
-            if (!currentUser) return;
+
+        // Mesaj Gönderme
+        window.sendMessage = function() {
             const input = document.getElementById('messageInput');
             const text = input.value.trim();
-            if (!text) return;
-            const msg = {
-                id: Date.now(),
+            if (!text || !currentUser) return;
+
+            push(messagesRef, {
                 sender: currentUser.name,
                 type: 'text',
                 content: text,
                 time: new Date().toLocaleTimeString('tr-TR', {hour: '2-digit', minute:'2-digit'}),
-                date: new Date().toLocaleDateString('tr-TR')
-            };
-            messages.push(msg);
-            localStorage.setItem('beratEnesMessages', JSON.stringify(messages));
-            input.value = '';
-            showMessages();
-        }
-        document.getElementById('messageInput').addEventListener('keypress', function(e) { if (e.key === 'Enter') sendMessage(); });
-        function showMessages() {
-            if (!currentUser) return;
-            const container = document.getElementById('messages');
-            if (messages.length === 0) {
-                container.innerHTML = '<div style="text-align: center; color: #666; padding: 60px 20px;"><div style="font-size: 60px; margin-bottom: 20px;">💕</div><h3 style="color: #333; margin-bottom: 10px;">Hoş Geldiniz</h3><p>Mesajlaşmaya başlayın</p></div>';
-                return;
-            }
-            let currentDate = '';
-            let html = '';
-            messages.forEach(msg => {
-                if (msg.date !== currentDate) {
-                    currentDate = msg.date;
-                    html += '<div class="date-badge">' + currentDate + '</div>';
-                }
-                const isMe = msg.sender === currentUser.name;
-                const cssClass = isMe ? 'me' : 'partner';
-                html += '<div class="message ' + cssClass + '">';
-                if (msg.type === 'image') {
-                    html += '<img src="' + msg.content + '" class="message-image">';
-                } else {
-                    html += '<div>' + msg.content.replace(/</g, '&lt;') + '</div>';
-                }
-                html += '<div class="message-time">' + msg.time + (isMe ? ' <span class="message-status">✓✓</span>' : '') + '</div>';
-                html += '</div>';
+                date: new Date().toLocaleDateString('tr-TR'),
+                timestamp: Date.now()
             });
-            container.innerHTML = html;
-            container.scrollTop = container.scrollHeight;
+            input.value = '';
         }
-        function clearChat() {
-            if (confirm('Tüm mesajlar silinsin mi?')) {
-                messages = [];
-                localStorage.removeItem('beratEnesMessages');
-                showMessages();
+
+        window.sendImageMessage = (imageUrl) => {
+            push(messagesRef, {
+                sender: currentUser.name,
+                type: 'image',
+                content: imageUrl,
+                time: new Date().toLocaleTimeString('tr-TR', {hour: '2-digit', minute:'2-digit'}),
+                date: new Date().toLocaleDateString('tr-TR'),
+                timestamp: Date.now()
+            });
+        }
+
+        // Mesajları Yükleme
+        function loadMessages() {
+            onValue(messagesRef, (snapshot) => {
+                const container = document.getElementById('messages');
+                container.innerHTML = '';
+                const data = snapshot.val();
+                if (!data) {
+                    container.innerHTML = '<div style="text-align: center; color: #666; padding: 60px 20px;"><div style="font-size: 60px; margin-bottom: 20px;">💕</div><h3>Mesajlaşmaya başlayın</h3></div>';
+                    return;
+                }
+
+                let currentDate = '';
+                Object.values(data).sort((a,b) => a.timestamp - b.timestamp).forEach(msg => {
+                    if (msg.date !== currentDate) {
+                        currentDate = msg.date;
+                        container.innerHTML += `<div class="date-badge">${currentDate}</div>`;
+                    }
+                    const isMe = msg.sender === currentUser.name;
+                    const cssClass = isMe ? 'me' : 'partner';
+                    
+                    let contentHTML = msg.type === 'image' 
+                        ? `<img src="${msg.content}" class="message-image">` 
+                        : `<div>${msg.content.replace(/</g, '&lt;')}</div>`;
+
+                    container.innerHTML += `
+                        <div class="message ${cssClass}">
+                            ${contentHTML}
+                            <div class="message-time">${msg.time} ${isMe ? '<span class="message-status">✓✓</span>' : ''}</div>
+                        </div>`;
+                });
+                container.scrollTop = container.scrollHeight;
+            });
+        }
+
+        // Diğer Fonksiyonlar
+        window.openImageModal = () => document.getElementById('imageModal').classList.add('active');
+        window.closeImageModal = () => document.getElementById('imageModal').classList.remove('active');
+        window.handleImageUpload = (event) => {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = (e) => sendImageMessage(e.target.result);
+                reader.readAsDataURL(file);
             }
+            closeImageModal();
         }
+        window.clearChat = () => { if(confirm('Tüm mesajlar silinsin mi?')) remove(messagesRef); }
+        document.getElementById('messageInput').addEventListener('keypress', (e) => { if (e.key === 'Enter') sendMessage(); });
     </script>
 </body>
 </html>
