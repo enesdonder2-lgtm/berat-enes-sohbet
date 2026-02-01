@@ -6,153 +6,247 @@
     <meta name="robots" content="noindex, nofollow">
     <title>Berat ❤️ Enes</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #000; min-height: 100vh; display: flex; justify-content: center; align-items: center; }
-        .container { width: 100%; height: 100vh; max-width: 430px; background: #1c1c1e; display: flex; flex-direction: column; position: relative; }
-        .login-screen { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, #1c1c1e 0%, #2c2c2e 100%); display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 1000; padding: 20px; }
-        .login-box { background: #2c2c2e; padding: 40px 30px; border-radius: 20px; text-align: center; width: 100%; }
-        .login-box h1 { color: #fff; font-size: 32px; margin-bottom: 10px; }
-        .login-box p { color: #8e8e93; margin-bottom: 40px; }
-        .login-box input { width: 100%; padding: 18px; background: #1c1c1e; border: 1px solid #3a3a3c; border-radius: 12px; color: #fff; font-size: 18px; text-align: center; margin-bottom: 15px; }
-        .login-btn { width: 100%; padding: 18px; background: #007aff; color: white; border: none; border-radius: 12px; font-size: 18px; font-weight: 600; }
-        .error { color: #ff3b30; margin-top: 15px; display: none; }
-        .chat-screen { display: none; flex-direction: column; height: 100%; }
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+        body { background: #000; min-height: 100vh; display: flex; justify-content: center; align-items: center; }
+        .container { width: 100%; height: 100vh; max-width: 430px; background: var(--bg-color, #E5DDD5); display: flex; flex-direction: column; position: relative; overflow: hidden; }
+        .bg-pattern { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E"); opacity: 0.1; z-index: 0; }
+        .login-screen { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 1000; padding: 20px; }
+        .login-box { background: rgba(255,255,255,0.1); backdrop-filter: blur(20px); padding: 40px 30px; border-radius: 30px; text-align: center; width: 100%; max-width: 350px; border: 1px solid rgba(255,255,255,0.2); }
+        .login-box h1 { color: #fff; font-size: 48px; margin-bottom: 10px; animation: heartbeat 1.5s ease-in-out infinite; }
+        @keyframes heartbeat { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); } }
+        .login-box .subtitle { color: rgba(255,255,255,0.8); margin-bottom: 30px; font-size: 18px; }
+        .day-counter { background: rgba(255,255,255,0.15); border-radius: 20px; padding: 20px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.2); }
+        .day-counter .number { font-size: 48px; font-weight: bold; color: #fff; text-shadow: 0 0 20px rgba(255,255,255,0.5); }
+        .day-counter .label { color: rgba(255,255,255,0.7); font-size: 14px; margin-top: 5px; }
+        .login-box input { width: 100%; padding: 18px 20px; background: rgba(0,0,0,0.3); border: 2px solid rgba(255,255,255,0.1); border-radius: 15px; color: #fff; font-size: 18px; text-align: center; margin-bottom: 20px; }
+        .login-btn { width: 100%; padding: 18px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; border-radius: 15px; font-size: 18px; font-weight: 600; }
+        .error { color: #ff6b6b; margin-top: 15px; display: none; font-size: 14px; }
+        .chat-screen { display: none; flex-direction: column; height: 100%; position: relative; z-index: 1; }
         .chat-screen.active { display: flex; }
-        .header { background: #1c1c1e; padding: 15px 20px; display: flex; align-items: center; justify-content: space-between; border-bottom: 0.5px solid #3a3a3c; padding-top: 50px; }
-        .header-left { display: flex; align-items: center; gap: 12px; }
-        .avatar { width: 40px; height: 40px; background: linear-gradient(135deg, #007aff 0%, #5856d6 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; }
-        .header-info h2 { color: #fff; font-size: 17px; }
-        .header-info p { color: #34c759; font-size: 13px; }
-        .clear-btn { background: #ff3b30; color: white; border: none; padding: 10px 16px; border-radius: 10px; font-size: 14px; }
-        .messages { flex: 1; overflow-y: auto; padding: 20px 15px; display: flex; flex-direction: column; gap: 8px; background: #000; }
-        .message { max-width: 75%; padding: 12px 16px; border-radius: 20px; word-wrap: break-word; font-size: 16px; }
-        .message.me { align-self: flex-end; background: #007aff; color: white; border-bottom-right-radius: 6px; }
-        .message.partner { align-self: flex-start; background: #2c2c2e; color: #fff; border-bottom-left-radius: 6px; }
-        .message-sender { font-size: 12px; opacity: 0.8; margin-bottom: 3px; font-weight: 600; }
-        .message-time { font-size: 11px; opacity: 0.7; margin-top: 4px; text-align: right; }
-        .input-area { background: #1c1c1e; padding: 12px 15px 30px; border-top: 0.5px solid #3a3a3c; }
-        .input-info { color: #8e8e93; font-size: 13px; margin-bottom: 10px; text-align: center; }
-        .input-row { display: flex; gap: 10px; align-items: center; }
-        .message-input { flex: 1; padding: 14px 18px; background: #2c2c2e; border: none; border-radius: 22px; color: #fff; font-size: 17px; }
-        .send-btn { width: 44px; height: 44px; background: #007aff; border: none; border-radius: 50%; color: white; font-size: 20px; }
-        .emoji-bar { display: flex; gap: 8px; margin-top: 12px; overflow-x: auto; }
-        .emoji-btn { background: #2c2c2e; border: none; border-radius: 12px; padding: 10px 14px; font-size: 24px; }
+        .header { background: var(--header-bg, #075E54); padding: 12px 16px; display: flex; align-items: center; gap: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); padding-top: 50px; }
+        .back-btn { color: white; font-size: 24px; cursor: pointer; }
+        .profile-photo { width: 45px; height: 45px; border-radius: 50%; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; font-size: 20px; cursor: pointer; position: relative; overflow: hidden; border: 2px solid rgba(255,255,255,0.3); }
+        .profile-photo img { width: 100%; height: 100%; object-fit: cover; }
+        .header-info { flex: 1; }
+        .header-info h2 { color: #fff; font-size: 17px; font-weight: 600; }
+        .header-info p { color: rgba(255,255,255,0.7); font-size: 13px; }
+        .header-actions { display: flex; gap: 15px; }
+        .header-btn { color: white; font-size: 20px; background: none; border: none; cursor: pointer; }
+        .messages { flex: 1; overflow-y: auto; padding: 20px 12px; display: flex; flex-direction: column; gap: 8px; position: relative; z-index: 1; }
+        .date-badge { align-self: center; background: rgba(0,0,0,0.2); color: rgba(255,255,255,0.8); padding: 6px 12px; border-radius: 15px; font-size: 12px; margin: 10px 0; }
+        .message { max-width: 80%; padding: 8px 12px; border-radius: 8px; word-wrap: break-word; font-size: 15px; line-height: 1.4; position: relative; box-shadow: 0 1px 2px rgba(0,0,0,0.1); }
+        .message.me { align-self: flex-end; background: var(--message-bg-me, #DCF8C6); color: #000; border-bottom-right-radius: 2px; }
+        .message.partner { align-self: flex-start; background: var(--message-bg-partner, #fff); color: #000; border-bottom-left-radius: 2px; }
+        .message-image { max-width: 100%; border-radius: 8px; margin-bottom: 4px; }
+        .message-time { font-size: 11px; color: rgba(0,0,0,0.5); text-align: right; margin-top: 2px; display: flex; align-items: center; justify-content: flex-end; gap: 3px; }
+        .message-status { color: #53bdeb; font-size: 14px; }
+        .input-area { background: #F0F0F0; padding: 10px 12px; display: flex; align-items: flex-end; gap: 10px; border-top: 1px solid rgba(0,0,0,0.1); }
+        .input-btn { width: 40px; height: 40px; border-radius: 50%; border: none; background: none; color: #54656F; font-size: 24px; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+        .input-container { flex: 1; background: #fff; border-radius: 25px; padding: 10px 15px; display: flex; align-items: center; gap: 10px; }
+        .message-input { flex: 1; border: none; background: none; font-size: 16px; outline: none; color: #000; }
+        .send-btn { width: 40px; height: 40px; border-radius: 50%; background: var(--primary-color, #128C7E); color: white; border: none; font-size: 20px; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 2000; justify-content: center; align-items: center; padding: 20px; }
+        .modal.active { display: flex; }
+        .modal-content { background: #fff; border-radius: 20px; padding: 30px; text-align: center; max-width: 300px; width: 100%; }
+        .modal-btn { width: 100%; padding: 15px; margin: 10px 0; border: none; border-radius: 10px; font-size: 16px; cursor: pointer; }
+        .modal-btn.primary { background: #128C7E; color: white; }
+        #fileInput, #profileInput { display: none; }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="container">
+        <div class="bg-pattern"></div>
         <div class="login-screen" id="loginScreen">
             <div class="login-box">
                 <h1>💕</h1>
-                <p>Berat ❤️ Enes</p>
-                <input type="text" id="passwordInput" placeholder="Şifre">
+                <p class="subtitle">Berat ❤️ Enes</p>
+                <div class="day-counter">
+                    <div class="number" id="dayCount">0</div>
+                    <div class="label">gündür birlikteyiz</div>
+                    <div style="color: rgba(255,255,255,0.5); font-size: 12px; margin-top: 10px;">9 Ocak 2025'ten beri</div>
+                </div>
+                <input type="password" id="passwordInput" placeholder="Şifrenizi girin">
                 <button class="login-btn" onclick="login()">Giriş Yap</button>
-                <div class="error" id="errorMsg">Yanlış şifre!</div>
-                <p style="color: #666; font-size: 13px; margin-top: 15px;">berat1 veya enes1</p>
+                <div class="error" id="errorMsg">Yanlış şifre! (berat1 veya enes1)</div>
             </div>
         </div>
         <div class="chat-screen" id="chatScreen">
-            <div class="header">
-                <div class="header-left">
-                    <div class="avatar">💕</div>
-                    <div class="header-info">
-                        <h2 id="chatTitle">...</h2>
-                        <p>Çevrimiçi</p>
-                    </div>
+            <div class="header" id="header">
+                <div class="back-btn" onclick="logout()">←</div>
+                <div class="profile-photo" id="profilePhoto" onclick="changeProfilePhoto()">
+                    <span id="profileEmoji">💕</span>
                 </div>
-                <button class="clear-btn" onclick="clearChat()">Sil</button>
+                <div class="header-info">
+                    <h2 id="chatTitle">...</h2>
+                    <p>çevrimiçi</p>
+                </div>
+                <div class="header-actions">
+                    <button class="header-btn" onclick="clearChat()">🗑️</button>
+                </div>
             </div>
             <div class="messages" id="messages"></div>
             <div class="input-area">
-                <div class="input-info" id="inputInfo">...</div>
-                <div class="input-row">
-                    <input type="text" class="message-input" id="messageInput" placeholder="Mesaj...">
-                    <button class="send-btn" onclick="sendMessage()">➤</button>
+                <button class="input-btn" onclick="openImageModal()">📎</button>
+                <div class="input-container">
+                    <input type="text" class="message-input" id="messageInput" placeholder="Mesaj yaz...">
                 </div>
-                <div class="emoji-bar">
-                    <button class="emoji-btn" onclick="addEmoji('❤️')">❤️</button>
-                    <button class="emoji-btn" onclick="addEmoji('💕')">💕</button>
-                    <button class="emoji-btn" onclick="addEmoji('😘')">😘</button>
-                    <button class="emoji-btn" onclick="addEmoji('😍')">😍</button>
-                    <button class="emoji-btn" onclick="addEmoji('🥰')">🥰</button>
-                </div>
+                <button class="send-btn" onclick="sendMessage()">➤</button>
             </div>
         </div>
     </div>
+    <div class="modal" id="imageModal">
+        <div class="modal-content">
+            <h3>Fotoğraf Gönder</h3>
+            <button class="modal-btn primary" onclick="document.getElementById('fileInput').click()">Galeriden Seç</button>
+            <button class="modal-btn secondary" onclick="closeImageModal()">İptal</button>
+        </div>
+    </div>
+    <input type="file" id="fileInput" accept="image/*" onchange="handleImageUpload(event)">
+    <input type="file" id="profileInput" accept="image/*" onchange="handleProfileUpload(event)">
     <script>
-        var USERS = {
-            'berat1': { name: 'Berat', partner: 'Enes' },
-            'enes1': { name: 'Enes', partner: 'Berat' }
+        const USERS = {
+            'berat1': { name: 'Berat', partner: 'Enes', theme: { primary: '#128C7E', headerBg: '#075E54', bg: '#E5DDD5', messageMe: '#DCF8C6', messagePartner: '#fff' }},
+            'enes1': { name: 'Enes', partner: 'Berat', theme: { primary: '#EE5A6F', headerBg: '#EE5A6F', bg: '#FFE5E5', messageMe: '#FFD4D4', messagePartner: '#fff' }}
         };
-        var currentUser = null;
-        var messages = JSON.parse(localStorage.getItem('chatMessages')) || [];
-        
+        function calculateDays() {
+            const startDate = new Date('2025-01-09');
+            const today = new Date();
+            return Math.ceil(Math.abs(today - startDate) / (1000 * 60 * 60 * 24));
+        }
+        document.getElementById('dayCount').textContent = calculateDays();
+        let currentUser = null;
+        let messages = JSON.parse(localStorage.getItem('beratEnesMessages')) || [];
+        let profilePhotos = JSON.parse(localStorage.getItem('beratEnesPhotos')) || {};
         function login() {
-            var input = document.getElementById('passwordInput').value.toLowerCase().trim();
+            const input = document.getElementById('passwordInput').value.toLowerCase().trim();
             if (USERS[input]) {
                 currentUser = USERS[input];
+                document.documentElement.style.setProperty('--primary-color', currentUser.theme.primary);
+                document.documentElement.style.setProperty('--header-bg', currentUser.theme.headerBg);
+                document.documentElement.style.setProperty('--bg-color', currentUser.theme.bg);
+                document.documentElement.style.setProperty('--message-bg-me', currentUser.theme.messageMe);
+                document.documentElement.style.setProperty('--message-bg-partner', currentUser.theme.messagePartner);
                 document.getElementById('loginScreen').style.display = 'none';
                 document.getElementById('chatScreen').style.display = 'flex';
-                document.getElementById('chatTitle').textContent = currentUser.name + ' ❤️ ' + currentUser.partner;
-                document.getElementById('inputInfo').textContent = currentUser.partner + ' ile konuşuyorsunuz';
+                document.getElementById('chatTitle').textContent = currentUser.partner;
                 showMessages();
             } else {
                 document.getElementById('errorMsg').style.display = 'block';
+                setTimeout(() => document.getElementById('errorMsg').style.display = 'none', 3000);
             }
         }
-        
-        document.getElementById('passwordInput').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') login();
-        });
-        
-        function addEmoji(emoji) {
-            document.getElementById('messageInput').value += emoji;
+        document.getElementById('passwordInput').addEventListener('keypress', function(e) { if (e.key === 'Enter') login(); });
+        function logout() {
+            currentUser = null;
+            document.getElementById('loginScreen').style.display = 'flex';
+            document.getElementById('chatScreen').style.display = 'none';
+            document.getElementById('passwordInput').value = '';
         }
-        
-        function sendMessage() {
-            if (!currentUser) return;
-            var text = document.getElementById('messageInput').value.trim();
-            if (!text) return;
-            var msg = {
+        function changeProfilePhoto() {
+            document.getElementById('profileInput').click();
+        }
+        function handleProfileUpload(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    profilePhotos[currentUser.partner] = e.target.result;
+                    localStorage.setItem('beratEnesPhotos', JSON.stringify(profilePhotos));
+                    updateProfilePhoto();
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+        function updateProfilePhoto() {
+            const photoUrl = profilePhotos[currentUser.partner];
+            const photoEl = document.getElementById('profilePhoto');
+            if (photoUrl) {
+                photoEl.innerHTML = '<img src="' + photoUrl + '">';
+            } else {
+                photoEl.innerHTML = '<span id="profileEmoji">💕</span>';
+            }
+        }
+        function openImageModal() {
+            document.getElementById('imageModal').classList.add('active');
+        }
+        function closeImageModal() {
+            document.getElementById('imageModal').classList.remove('active');
+        }
+        function handleImageUpload(event) {
+            const file = event.target.files[0];
+            if (file && currentUser) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    sendImageMessage(e.target.result);
+                };
+                reader.readAsDataURL(file);
+            }
+            closeImageModal();
+        }
+        function sendImageMessage(imageUrl) {
+            const msg = {
+                id: Date.now(),
                 sender: currentUser.name,
-                text: text,
-                time: new Date().toLocaleTimeString('tr-TR', {hour: '2-digit', minute:'2-digit'})
+                type: 'image',
+                content: imageUrl,
+                time: new Date().toLocaleTimeString('tr-TR', {hour: '2-digit', minute:'2-digit'}),
+                date: new Date().toLocaleDateString('tr-TR')
             };
             messages.push(msg);
-            localStorage.setItem('chatMessages', JSON.stringify(messages));
-            document.getElementById('messageInput').value = '';
+            localStorage.setItem('beratEnesMessages', JSON.stringify(messages));
             showMessages();
         }
-        
-        document.getElementById('messageInput').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') sendMessage();
-        });
-        
+        function sendMessage() {
+            if (!currentUser) return;
+            const input = document.getElementById('messageInput');
+            const text = input.value.trim();
+            if (!text) return;
+            const msg = {
+                id: Date.now(),
+                sender: currentUser.name,
+                type: 'text',
+                content: text,
+                time: new Date().toLocaleTimeString('tr-TR', {hour: '2-digit', minute:'2-digit'}),
+                date: new Date().toLocaleDateString('tr-TR')
+            };
+            messages.push(msg);
+            localStorage.setItem('beratEnesMessages', JSON.stringify(messages));
+            input.value = '';
+            showMessages();
+        }
+        document.getElementById('messageInput').addEventListener('keypress', function(e) { if (e.key === 'Enter') sendMessage(); });
         function showMessages() {
             if (!currentUser) return;
-            var container = document.getElementById('messages');
+            const container = document.getElementById('messages');
             if (messages.length === 0) {
-                container.innerHTML = '<div style="text-align: center; color: #666; padding: 60px 20px;"><div style="font-size: 60px; margin-bottom: 20px;">💕</div><h3 style="color: #fff; margin-bottom: 10px;">Hoş Geldiniz</h3><p>Mesajlaşmaya başlayın</p></div>';
+                container.innerHTML = '<div style="text-align: center; color: #666; padding: 60px 20px;"><div style="font-size: 60px; margin-bottom: 20px;">💕</div><h3 style="color: #333; margin-bottom: 10px;">Hoş Geldiniz</h3><p>Mesajlaşmaya başlayın</p></div>';
                 return;
             }
-            var html = '';
-            for (var i = 0; i < messages.length; i++) {
-                var m = messages[i];
-                var isMe = m.sender === currentUser.name;
-                html += '<div class="message ' + (isMe ? 'me' : 'partner') + '">';
-                html += '<div class="message-sender">' + m.sender + '</div>';
-                html += '<div>' + m.text.replace(/</g, '&lt;') + '</div>';
-                html += '<div class="message-time">' + m.time + '</div>';
+            let currentDate = '';
+            let html = '';
+            messages.forEach(msg => {
+                if (msg.date !== currentDate) {
+                    currentDate = msg.date;
+                    html += '<div class="date-badge">' + currentDate + '</div>';
+                }
+                const isMe = msg.sender === currentUser.name;
+                const cssClass = isMe ? 'me' : 'partner';
+                html += '<div class="message ' + cssClass + '">';
+                if (msg.type === 'image') {
+                    html += '<img src="' + msg.content + '" class="message-image">';
+                } else {
+                    html += '<div>' + msg.content.replace(/</g, '&lt;') + '</div>';
+                }
+                html += '<div class="message-time">' + msg.time + (isMe ? ' <span class="message-status">✓✓</span>' : '') + '</div>';
                 html += '</div>';
-            }
+            });
             container.innerHTML = html;
             container.scrollTop = container.scrollHeight;
         }
-        
         function clearChat() {
             if (confirm('Tüm mesajlar silinsin mi?')) {
                 messages = [];
-                localStorage.removeItem('chatMessages');
+                localStorage.removeItem('beratEnesMessages');
                 showMessages();
             }
         }
