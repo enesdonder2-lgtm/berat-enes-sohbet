@@ -3,8 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="mobile-web-app-capable" content="yes">
     <title>Berat ❤️ Enes</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
@@ -33,7 +31,6 @@
             height: -webkit-fill-available;
             overflow: hidden;
             color: var(--text-color);
-            touch-action: manipulation;
         }
         .container {
             height: 100%;
@@ -47,25 +44,7 @@
             position: fixed;
             top: 0; left: 0; right: 0; bottom: 0;
             opacity: 0.06;
-            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 53 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.93 0 3.5-1.57 3.5-3.5S13.93 53 12 53s-3.5 1.57-3.5 3.5S10.07 60 12 60z' fill='%23000' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E");
-            pointer-events: none;
-            z-index: 0;
-        }
-        
-        .login-screen {
-            position: fixed;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-            padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
-        }
-        .login-box {
-            background: rgba(255,255,255,0.95);
-            padding: 40px;
-            border-radius: 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.93 0 3.5-1.57 3.5-3.5S13.93 53 12 53s-3.5 1.57-3.5 3.5S10.07 60 12 60z' fill='%23000' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.93 0 3.5-1.57 3.5-3.5S13.93 53 12 53s-3.5 1.57-3.5 3.5S10.07 60 12 60z' fill='%23000' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E");
             pointer-events: none;
             z-index: 0;
         }
@@ -88,17 +67,8 @@
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
             max-width: 350px;
             width: 90%;
-            animation: fadeIn 0.5s;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .login-box h1 { font-size: 60px; margin-bottom: 10px; animation: heartbeat 1.5s infinite; }
-        @keyframes heartbeat {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-        }
+        .login-box h1 { font-size: 60px; margin-bottom: 10px; }
         .subtitle { color: #666; font-size: 18px; margin-bottom: 30px; font-weight: 600; }
         .day-counter {
             background: linear-gradient(135deg, #667eea, #764ba2);
@@ -119,13 +89,11 @@
             border: 2px solid #ddd;
             border-radius: 10px;
             font-size: 16px;
-            transition: border-color 0.3s;
             -webkit-appearance: none;
         }
         .password-input-wrapper input:focus {
             outline: none;
             border-color: #667eea;
-            border-width: 2px;
         }
         .toggle-password {
             position: absolute;
@@ -136,8 +104,6 @@
             border: none;
             cursor: pointer;
             font-size: 18px;
-            color: #666;
-            padding: 5px;
         }
         .login-btn {
             width: 100%;
@@ -149,37 +115,22 @@
             font-size: 16px;
             font-weight: 600;
             cursor: pointer;
-            transition: all 0.2s;
             -webkit-appearance: none;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
         }
-        .login-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
-        }
-        .login-btn:active { transform: translateY(0) scale(0.98); }
+        .login-btn:active { transform: scale(0.98); }
         .shake { animation: shake 0.5s; }
         @keyframes shake {
             0%, 100% { transform: translateX(0); }
             25% { transform: translateX(-10px); }
             75% { transform: translateX(10px); }
         }
-        .error-text {
-            color: #e74c3c;
-            font-size: 14px;
-            margin-top: 10px;
-            display: none;
-        }
         
         .chat-screen {
             display: none;
             flex-direction: column;
             height: 100%;
-            height: 100vh;
-            height: -webkit-fill-available;
             position: relative;
             z-index: 1;
-            padding-bottom: env(safe-area-inset-bottom);
         }
         .header {
             background: var(--header-bg);
@@ -189,7 +140,6 @@
             display: flex;
             align-items: center;
             gap: 15px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             flex-shrink: 0;
         }
         .back-btn {
@@ -210,171 +160,9 @@
             justify-content: center;
             cursor: pointer;
             overflow: hidden;
-            flex-shrink: 0;
         }
-        .profile-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .profile-photo span { font-size: 24px; }
-        .header-info { flex: 1; min-width: 0; }
-        .header-info h2 {
-            color: #fff;
-            font-size3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.93 0 3.5-1.57 3.5-3.5S13.93 53 12 53s-3.5 1.57-3.5 3.5S10.07 60 12 60z' fill='%23000' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E");
-            pointer-events: none;
-            z-index: 0;
-        }
-        
-        .login-screen {
-            position: fixed;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-            padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
-        }
-        .login-box {
-            background: rgba(255,255,255,0.95);
-            padding: 40px;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            max-width: 350px;
-            width: 90%;
-            animation: fadeIn 0.5s;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .login-box h1 { font-size: 60px; margin-bottom: 10px; animation: heartbeat 1.5s infinite; }
-        @keyframes heartbeat {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-        }
-        .subtitle { color: #666; font-size: 18px; margin-bottom: 30px; font-weight: 600; }
-        .day-counter {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            padding: 20px;
-            border-radius: 15px;
-            margin-bottom: 25px;
-        }
-        .day-counter .number { font-size: 48px; font-weight: bold; }
-        .day-counter .label { font-size: 14px; opacity: 0.9; }
-        .password-input-wrapper {
-            position: relative;
-            margin-bottom: 20px;
-        }
-        .password-input-wrapper input {
-            width: 100%;
-            padding: 15px 45px 15px 15px;
-            border: 2px solid #ddd;
-            border-radius: 10px;
-            font-size: 16px;
-            transition: border-color 0.3s;
-            -webkit-appearance: none;
-        }
-        .password-input-wrapper input:focus {
-            outline: none;
-            border-color: #667eea;
-            border-width: 2px;
-        }
-        .toggle-password {
-            position: absolute;
-            right: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 18px;
-            color: #666;
-            padding: 5px;
-        }
-        .login-btn {
-            width: 100%;
-            padding: 15px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            border: none;
-            border-radius: 10px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s;
-            -webkit-appearance: none;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
-        }
-        .login-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
-        }
-        .login-btn:active { transform: translateY(0) scale(0.98); }
-        .shake { animation: shake 0.5s; }
-        @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            25% { transform: translateX(-10px); }
-            75% { transform: translateX(10px); }
-        }
-        .error-text {
-            color: #e74c3c;
-            font-size: 14px;
-            margin-top: 10px;
-            display: none;
-        }
-        
-        .chat-screen {
-            display: none;
-            flex-direction: column;
-            height: 100%;
-            height: 100vh;
-            height: -webkit-fill-available;
-            position: relative;
-            z-index: 1;
-            padding-bottom: env(safe-area-inset-bottom);
-        }
-        .header {
-            background: var(--header-bg);
-            color: white;
-            padding: 10px 16px;
-            padding-top: max(10px, env(safe-area-inset-top));
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            flex-shrink: 0;
-        }
-        .back-btn {
-            font-size: 24px;
-            cursor: pointer;
-            padding: 5px;
-            background: none;
-            border: none;
-            color: white;
-        }
-        .profile-photo {
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            overflow: hidden;
-            flex-shrink: 0;
-        }
-        .profile-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .profile-photo span { font-size: 24px; }
-        .header-info { flex: 1; min-width: 0; }
+        .profile-photo img { width: 100%; height: 100%; object-fit: cover; }
+        .header-info { flex: 1; }
         .header-info h2 {
             color: #fff;
             font-size: 17px;
@@ -383,20 +171,10 @@
             display: flex;
             align-items: center;
             gap: 5px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
         }
-        .header-info p {
-            color: var(--secondary-text);
-            font-size: 13px;
-        }
+        .header-info p { color: var(--secondary-text); font-size: 13px; }
         .typing-indicator { color: #53bdeb !important; font-style: italic; }
-        .header-actions {
-            display: flex;
-            gap: 10px;
-            flex-shrink: 0;
-        }
+        .header-actions { display: flex; gap: 10px; }
         .header-btn {
             color: white;
             font-size: 20px;
@@ -409,7 +187,6 @@
         .messages {
             flex: 1;
             overflow-y: auto;
-            overflow-x: hidden;
             padding: 20px 12px;
             display: flex;
             flex-direction: column;
@@ -430,11 +207,6 @@
             flex-direction: column;
             max-width: 80%;
             position: relative;
-            animation: fadeIn 0.3s;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
         }
         .message-wrapper.me { align-self: flex-end; }
         .message-wrapper.partner { align-self: flex-start; }
@@ -445,7 +217,6 @@
             font-size: 15px;
             line-height: 1.4;
             box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-            cursor: pointer;
         }
         .message.me {
             background: var(--message-me);
@@ -462,7 +233,6 @@
             border-radius: 8px;
             margin-bottom: 4px;
             cursor: pointer;
-            display: block;
         }
         .message-time {
             font-size: 11px;
@@ -499,16 +269,6 @@
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
-            -webkit-appearance: none;
-        }
-        .input-btn.recording {
-            background: #ff4444;
-            color: white;
-            animation: pulse 1s infinite;
-        }
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.1); }
         }
         .input-wrapper { flex: 1; display: flex; flex-direction: column; }
         .input-container {
@@ -525,7 +285,6 @@
             font-size: 16px;
             outline: none;
             color: var(--text-color);
-            -webkit-appearance: none;
         }
         .send-btn {
             width: 44px;
@@ -540,9 +299,7 @@
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
-            -webkit-appearance: none;
         }
-        .send-btn:active { transform: scale(0.95); }
         
         .modal {
             display: none;
@@ -563,11 +320,6 @@
             text-align: center;
             max-width: 350px;
             width: 100%;
-            animation: slideUp 0.3s;
-        }
-        @keyframes slideUp {
-            from { transform: translateY(50px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
         }
         .modal-btn {
             width: 100%;
@@ -577,7 +329,6 @@
             border-radius: 10px;
             font-size: 16px;
             cursor: pointer;
-            -webkit-appearance: none;
         }
         .modal-btn.primary { background: var(--primary-color); color: white; }
         .modal-btn.secondary { background: #f0f0f0; color: #333; }
@@ -600,41 +351,6 @@
             align-items: center;
             gap: 10px;
         }
-        .context-item:hover { background: rgba(0,0,0,0.05); }
-        
-        .recording-overlay {
-            display: none;
-            position: fixed;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0,0,0,0.8);
-            z-index: 2500;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-        .recording-overlay.active { display: flex; }
-        .recording-circle {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            background: #ff4444;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 40px;
-            color: white;
-            animation: recordingPulse 1s infinite;
-        }
-        @keyframes recordingPulse {
-            0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,68,68,0.7); }
-            50% { transform: scale(1.1); box-shadow: 0 0 0 20px rgba(255,68,68,0); }
-        }
-        .recording-time {
-            color: white;
-            font-size: 24px;
-            margin-top: 20px;
-            font-family: monospace;
-        }
         
         .contact-panel {
             position: fixed;
@@ -655,7 +371,6 @@
             padding-top: max(20px, env(safe-area-inset-top));
             display: flex;
             align-items: center;
-            gap: 15px;
         }
         .contact-avatar {
             width: 80px; height: 80px;
@@ -678,11 +393,7 @@
             align-items: center;
         }
         .image-viewer.active { display: flex; }
-        .image-viewer img {
-            max-width: 90%;
-            max-height: 80%;
-            border-radius: 10px;
-        }
+        .image-viewer img { max-width: 90%; max-height: 80%; border-radius: 10px; }
         .image-viewer-close {
             position: absolute;
             top: max(20px, env(safe-area-inset-top));
@@ -691,7 +402,6 @@
             font-size: 30px;
             background: none;
             border: none;
-            cursor: pointer;
         }
         
         .toast {
@@ -707,7 +417,6 @@
             z-index: 4000;
             opacity: 0;
             transition: all 0.3s;
-            pointer-events: none;
         }
         .toast.show {
             transform: translateX(-50%) translateY(0);
@@ -719,30 +428,29 @@
     <div class="container">
         <div class="bg-pattern"></div>
         
-        <!-- LOGIN SCREEN -->
+        <!-- LOGIN -->
         <div class="login-screen" id="loginScreen">
             <div class="login-box">
                 <h1>💕</h1>
                 <p class="subtitle">Berat ❤️ Enes</p>
                 <div class="day-counter">
-                    <div class="number" id="dayCount">0</div>
+                    <div class="number" id="dayCount">HESAPLANIYOR...</div>
                     <div class="label">gündür birlikteyiz</div>
                     <div style="color: rgba(255,255,255,0.6); font-size: 12px; margin-top: 8px;">9 Ocak 2025'ten beri</div>
                 </div>
                 <div class="password-input-wrapper">
-                    <input type="password" id="passwordInput" placeholder="Şifrenizi girin" autocomplete="off">
+                    <input type="password" id="passwordInput" placeholder="Şifrenizi girin">
                     <button class="toggle-password" onclick="togglePassword()">👁️</button>
                 </div>
                 <button class="login-btn" onclick="login()">Giriş Yap</button>
-                <p class="error-text" id="errorText">Şifre hatalı!</p>
             </div>
         </div>
         
-        <!-- CHAT SCREEN -->
+        <!-- CHAT -->
         <div class="chat-screen" id="chatScreen">
             <div class="header">
                 <button class="back-btn" onclick="logout()">←</button>
-                <div class="profile-photo" id="profilePhoto" onclick="showContactInfo()">
+                <div class="profile-photo" onclick="showContactInfo()">
                     <span>💕</span>
                 </div>
                 <div class="header-info">
@@ -765,10 +473,9 @@
                 <button class="input-btn" onclick="openAttachmentModal()">📎</button>
                 <div class="input-wrapper">
                     <div class="input-container">
-                        <input type="text" class="message-input" id="messageInput" placeholder="Mesaj yaz..." onkeypress="handleKeyPress(event)">
+                        <input type="text" class="message-input" id="messageInput" placeholder="Mesaj yaz...">
                     </div>
                 </div>
-                <button class="input-btn" id="micBtn" ontouchstart="startRecording()" ontouchend="stopRecording()" onmousedown="startRecording()" onmouseup="stopRecording()">🎤</button>
                 <button class="send-btn" onclick="sendMessage()">➤</button>
             </div>
         </div>
@@ -776,18 +483,13 @@
         <!-- CONTACT PANEL -->
         <div class="contact-panel" id="contactPanel">
             <div class="contact-header">
-                <button onclick="closeContactInfo()" style="background: none; border: none; color: white; font-size: 24px; cursor: pointer;">✕</button>
-                <div style="flex: 1;"></div>
+                <button onclick="closeContactInfo()" style="background: none; border: none; color: white; font-size: 24px;">✕</button>
             </div>
             <div style="background: var(--header-bg); padding: 0 20px 30px; text-align: center;">
-                <div class="contact-avatar" id="contactAvatar">
+                <div class="contact-avatar">
                     <span style="font-size: 40px;">💕</span>
                 </div>
                 <h2 style="color: white; margin-top: 15px;" id="contactName">...</h2>
-                <p style="color: rgba(255,255,255,0.7);">+90 5XX XXX XX XX</p>
-            </div>
-            <div style="flex: 1; padding: 20px;">
-                <button class="modal-btn danger" onclick="clearChat()" style="margin-top: 20px;">🗑️ Sohbeti Temizle</button>
             </div>
         </div>
     </div>
@@ -811,12 +513,6 @@
         </div>
     </div>
 
-    <div class="recording-overlay" id="recordingOverlay">
-        <div class="recording-circle">🎙️</div>
-        <div class="recording-time" id="recordingTime">00:00</div>
-        <div style="color: rgba(255,255,255,0.7); margin-top: 10px;">Bırakmak için bırakın</div>
-    </div>
-
     <div class="image-viewer" id="imageViewer" onclick="closeImageViewer()">
         <button class="image-viewer-close">✕</button>
         <img id="viewerImage" src="" alt="">
@@ -831,16 +527,21 @@
 
     <input type="file" id="fileInput" accept="image/*" style="display: none;" onchange="handleImageUpload(event)">
 
-    <!-- FIREBASE & APP LOGIC -->
-    <script type="module">
-        // FIREBASE IMPORT
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-        import { getDatabase, ref, push, onValue, remove, set, update } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+    <!-- SCRIPT - ESKİ TİP (type="module" YOK) -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
+    
+    <script>
+        // GÜN SAYACINI HESAPLA (Sayfa yüklenince hemen)
+        var startDate = new Date('2025-01-09');
+        var today = new Date();
+        var diffTime = Math.abs(today - startDate);
+        var diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+        document.getElementById('dayCount').textContent = diffDays;
+        console.log("Gün sayısı:", diffDays);
 
-        console.log("Script başladı!");
-
-        // CONFIG
-        const firebaseConfig = {
+        // FIREBASE CONFIG
+        var firebaseConfig = {
             apiKey: "AIzaSyBZYnpMlDoz2wnk9PnPrSr_usoSSq8Xkow",
             authDomain: "berat-enes-sohbet.firebaseapp.com",
             databaseURL: "https://berat-enes-sohbet-default-rtdb.europe-west1.firebasedatabase.app",
@@ -851,41 +552,25 @@
         };
 
         // INIT FIREBASE
-        let app, db;
-        try {
-            app = initializeApp(firebaseConfig);
-            db = getDatabase(app);
-            console.log("Firebase bağlandı!");
-        } catch (e) {
-            console.error("Firebase hatası:", e);
-            alert("İnternet bağlantınızı kontrol edin!");
-        }
+        var app = firebase.initializeApp(firebaseConfig);
+        var db = firebase.database();
+        console.log("Firebase başlatıldı!");
 
         // GLOBAL VARS
-        let currentUser = null;
-        let messagesRef = null;
-        let typingRef = null;
-        let selectedMessage = null;
-        let recordingInterval = null;
-        let recordingSeconds = 0;
-        let mediaRecorder = null;
-        let audioChunks = [];
+        var currentUser = null;
+        var messagesRef = null;
+        var typingRef = null;
+        var selectedMessage = null;
 
-        const USERS = {
+        var USERS = {
             'berat1': { name: 'Berat', partner: 'Enes', theme: { primary: '#128C7E', headerBg: '#075E54', messageMe: '#DCF8C6' }},
             'enes1': { name: 'Enes', partner: 'Berat', theme: { primary: '#EE5A6F', headerBg: '#EE5A6F', messageMe: '#FFD4D4' }}
         };
 
-        // GÜN SAYACI
-        const startDate = new Date('2025-01-09');
-        const today = new Date();
-        const days = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
-        document.getElementById('dayCount').textContent = days;
-
         // ŞİFRE GÖSTER/GİZLE
-        window.togglePassword = function() {
-            const input = document.getElementById('passwordInput');
-            const btn = document.querySelector('.toggle-password');
+        function togglePassword() {
+            var input = document.getElementById('passwordInput');
+            var btn = document.querySelector('.toggle-password');
             if (input.type === 'password') {
                 input.type = 'text';
                 btn.textContent = '🙈';
@@ -893,16 +578,15 @@
                 input.type = 'password';
                 btn.textContent = '👁️';
             }
-        };
+        }
 
-        // LOGIN - DÜZELTİLMİŞ
-        window.login = function() {
-            console.log("Login tıklandı!");
+        // LOGIN - BASİT VE ANLAŞILIR
+        function login() {
+            console.log("Login fonksiyonu çalıştı!");
             
-            const input = document.getElementById('passwordInput');
-            const password = input.value.toLowerCase().trim();
-            const loginBox = document.querySelector('.login-box');
-            const errorText = document.getElementById('errorText');
+            var input = document.getElementById('passwordInput');
+            var password = input.value.toLowerCase().trim();
+            var loginBox = document.querySelector('.login-box');
             
             console.log("Girilen şifre:", password);
             
@@ -910,12 +594,10 @@
             if (!USERS[password]) {
                 console.log("Şifre yanlış!");
                 loginBox.classList.add('shake');
-                errorText.style.display = 'block';
-                setTimeout(() => {
+                setTimeout(function() {
                     loginBox.classList.remove('shake');
-                    errorText.style.display = 'none';
                     input.value = '';
-                }, 1000);
+                }, 500);
                 return;
             }
             
@@ -923,13 +605,11 @@
             
             // Kullanıcı ayarla
             currentUser = USERS[password];
-            
-            // Firebase referansları
-            messagesRef = ref(db, "mesajlar");
-            typingRef = ref(db, "typing/" + currentUser.name);
+            messagesRef = db.ref("mesajlar");
+            typingRef = db.ref("typing/" + currentUser.name);
             
             // Temayı uygula
-            const theme = currentUser.theme;
+            var theme = currentUser.theme;
             document.documentElement.style.setProperty('--primary-color', theme.primary);
             document.documentElement.style.setProperty('--header-bg', theme.headerBg);
             document.documentElement.style.setProperty('--message-me', theme.messageMe);
@@ -940,12 +620,12 @@
             }
             
             // Kayıtlı ismi yükle
-            const savedName = localStorage.getItem('partnerName_' + currentUser.name);
+            var savedName = localStorage.getItem('partnerName_' + currentUser.name);
             if (savedName) {
                 currentUser.partner = savedName;
             }
             
-            // Ekranları değiştir
+            // EKRAN DEĞİŞTİR
             document.getElementById('loginScreen').style.display = 'none';
             document.getElementById('chatScreen').style.display = 'flex';
             
@@ -959,7 +639,7 @@
             
             console.log("Giriş başarılı!");
             showToast('Hoş geldin ' + currentUser.name + '!');
-        };
+        }
 
         // ENTER İLE GİRİŞ
         document.getElementById('passwordInput').addEventListener('keypress', function(e) {
@@ -969,25 +649,25 @@
         });
 
         // LOGOUT
-        window.logout = function() {
-            if (typingRef) set(typingRef, false);
+        function logout() {
+            if (typingRef) typingRef.set(false);
             currentUser = null;
             messagesRef = null;
             typingRef = null;
             document.getElementById('chatScreen').style.display = 'none';
             document.getElementById('loginScreen').style.display = 'flex';
             document.getElementById('passwordInput').value = '';
-        };
+        }
 
         // PARTNER İSİM DEĞİŞTİRME
-        window.changePartnerName = function() {
+        function changePartnerName() {
             if (!currentUser) return;
             document.getElementById('nameInput').value = currentUser.partner;
             document.getElementById('nameModal').classList.add('active');
-        };
+        }
 
-        window.savePartnerName = function() {
-            const newName = document.getElementById('nameInput').value.trim();
+        function savePartnerName() {
+            var newName = document.getElementById('nameInput').value.trim();
             if (newName && currentUser) {
                 currentUser.partner = newName;
                 localStorage.setItem('partnerName_' + currentUser.name, newName);
@@ -996,15 +676,15 @@
                 showToast('İsim değiştirildi!');
             }
             document.getElementById('nameModal').classList.remove('active');
-        };
+        }
 
-        window.closeNameModal = function() {
+        function closeNameModal() {
             document.getElementById('nameModal').classList.remove('active');
-        };
+        }
 
-        // TEMA DEĞİŞTİRME
-        window.toggleTheme = function() {
-            const isDark = document.body.getAttribute('data-theme') === 'dark';
+        // TEMA
+        function toggleTheme() {
+            var isDark = document.body.getAttribute('data-theme') === 'dark';
             if (isDark) {
                 document.body.removeAttribute('data-theme');
                 localStorage.setItem('darkMode', 'false');
@@ -1012,25 +692,25 @@
                 document.body.setAttribute('data-theme', 'dark');
                 localStorage.setItem('darkMode', 'true');
             }
-        };
+        }
 
-        // YAZIYOR... GÖSTERGESİ
-        let typingTimeout;
-        window.handleTyping = function() {
+        // YAZIYOR...
+        var typingTimeout;
+        function handleTyping() {
             if (!currentUser || !typingRef) return;
-            set(typingRef, true);
+            typingRef.set(true);
             clearTimeout(typingTimeout);
-            typingTimeout = setTimeout(() => {
-                if (typingRef) set(typingRef, false);
+            typingTimeout = setTimeout(function() {
+                if (typingRef) typingRef.set(false);
             }, 3000);
-        };
+        }
 
         function setupTypingListener() {
             if (!currentUser) return;
-            const partnerTypingRef = ref(db, "typing/" + currentUser.partner);
-            onValue(partnerTypingRef, (snapshot) => {
-                const isTyping = snapshot.val();
-                const statusText = document.getElementById('statusText');
+            var partnerTypingRef = db.ref("typing/" + currentUser.partner);
+            partnerTypingRef.on('value', function(snapshot) {
+                var isTyping = snapshot.val();
+                var statusText = document.getElementById('statusText');
                 if (isTyping) {
                     statusText.textContent = 'yazıyor...';
                     statusText.classList.add('typing-indicator');
@@ -1042,9 +722,9 @@
         }
 
         // MESAJ GÖNDERME
-        window.sendMessage = function() {
-            const input = document.getElementById('messageInput');
-            const text = input.value.trim();
+        function sendMessage() {
+            var input = document.getElementById('messageInput');
+            var text = input.value.trim();
             
             if (!text) return;
             if (!currentUser) {
@@ -1052,1111 +732,30 @@
                 return;
             }
             
-            try {
-                push(messagesRef, {
-                    sender: currentUser.name,
-                    type: 'text',
-                    content: text,
-                    time: new Date().toLocaleTimeString('tr-TR', {hour: '2-digit', minute:'2-digit'}),
-                    date: new Date().toLocaleDateString('tr-TR'),
-                    timestamp: Date.now()
-                });
-                
-                input.value = '';
-                if (typingRef) set(typingRef, false);
-                input.blur();
-            } catch (e) {
-                console.error("Mesaj hatası:", e);
-                showToast('Mesaj gönderilemedi!');
-            }
-        };
+            messagesRef.push({
+                sender: currentUser.name,
+                type: 'text',
+                content: text,
+                time: new Date().toLocaleTimeString('tr-TR', {hour: '2-digit', minute:'2-digit'}),
+                date: new Date().toLocaleDateString('tr-TR'),
+                timestamp: Date.now()
+            });
+            
+            input.value = '';
+            if (typingRef) typingRef.set(false);
+            input.blur();
+        }
 
         // ENTER İLE MESAJ
-        window.handleKeyPress = function(e) {
+        document.getElementById('messageInput').addEventListener('keypress', function(e) {
             if (e.key === 'Enter') {
                 sendMessage();
-            }
-        };
-
-        // SESLİ MESAJ
-        window.startRecording = async function() {
-            if (!currentUser) {
-                showToast('Önce giriş yapın!');
-                return;
-            }
-            
-            try {
-                const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-                mediaRecorder = new MediaRecorder(stream);
-                audioChunks = [];
-                
-                mediaRecorder.ondataavailable = (e) => audioChunks.push(e.data);
-                mediaRecorder.onstop = () => {
-                    const audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
-                    const reader = new FileReader();
-                    reader.onload = (e) => {
-                        push(messagesRef, {
-                            sender: currentUser.name,
-                            type: 'audio',
-                            content: e.target.result,
-                            duration: recordingSeconds,
-                            time: new Date().toLocaleTimeString('tr-TR', {hour: '2-digit', minute:'2-digit'}),
-                            date: new Date().toLocaleDateString('tr-TR'),
-                            timestamp: Date.now()
-                        });
-                    };
-                    reader.readAsDataURL(audioBlob);
-                };
-                
-                mediaRecorder.start();
-                recordingSeconds = 0;
-                document.getElementById('recordingOverlay').classList.add('active');
-                document.getElementById('micBtn').classList.add('recording');
-                
-                recordingInterval = setInterval(() => {
-                    recordingSeconds++;
-                    const mins = Math.floor(recordingSeconds / 60).toString().padStart(2, '0');
-                    const secs = (recordingSeconds % 60).toString().padStart(2, '0');
-                    document.getElementById('recordingTime').textContent = `${mins}:${secs}`;
-                }, 1000);
-            } catch (err) {
-                showToast('Mikrofon erişimi reddedildi');
-            }
-        };
-
-        window.stopRecording = function() {
-            if (!mediaRecorder) return;
-            clearInterval(recordingInterval);
-            mediaRecorder.stop();
-            mediaRecorder.stream.getTracks().forEach(track => track.stop());
-            document.getElementById('recordingOverlay').classList.remove('active');
-            document.getElementById('micBtn').classList.remove('recording');
-            mediaRecorder = null;
-        };
-
-        // KONUM
-        window.sendLocation = function() {
-            if (!currentUser) {
-                showToast('Önce giriş yapın!');
-                return;
-            }
-            
-            if (!navigator.geolocation) {
-                showToast('Konum desteklenmiyor');
-                return;
-            }
-            
-            navigator.geolocation.getCurrentPosition(
-                (position) => {
-                    push(messagesRef, {
-                        sender: currentUser.name,
-                        type: 'location',
-                        lat: position.coords.latitude,
-                        lng: position.coords.longitude,
-                        time: new Date().toLocaleTimeString('tr-TR', {hour: '2-digit', minute:'2-digit'}),
-                        date: new Date().toLocaleDateString('tr-TR'),
-                        timestamp: Date.now()
-                    });
-                    closeAttachmentModal();
-                    showToast('Konum paylaşıldı');
-                },
-                () => showToast('Konum alınamadı')
-            );
-        };
-
-        // DOSYA EKLEME
-        window.openAttachmentModal = function() {
-            document.getElementById('attachmentModal').classList.add('active');
-        };
-
-        window.closeAttachmentModal = function() {
-            document.getElementById('attachmentModal').classList.remove('active');
-        };
-
-        window.handleImageUpload = function(event) {
-            const file = event.target.files[0];
-            if (!file || !currentUser) return;
-            
-            const reader = new FileReader();
-            reader.onload = (e) => {
-                push(messagesRef, {
-                    sender: currentUser.name,
-                    type: 'image',
-                    content: e.target.result,
-                    time: new Date().toLocaleTimeString('tr-TR', {hour: '2-digit', minute:'2-digit'}),
-                    date: new Date().toLocaleDateString('tr-TR'),
-                    timestamp: Date.now()
-                });
-            };
-            reader.readAsDataURL(file);
-            closeAttachmentModal();
-        };
-
-        // MESAJLARI YÜKLE
-        function loadMessages() {
-            if (!messagesRef) return;
-            
-            onValue(messagesRef, (snapshot) => {
-                const container = document.getElementById('messages');
-                container.innerHTML = '';
-                const data = snapshot.val();
-                
-                if (!data) {
-                    container.innerHTML = '<div style="text-align: center; color: #666; padding: 60px 20px;"><div style="font-size: 60px; margin-bottom: 20px;">💕</div><h3>Mesajlaşmaya başlayın</h3></div>';
-                    return;
-                }
-
-                let currentDate = '';
-                Object.entries(data).sort((a,b) => a[1].timestamp - b[1].timestamp).forEach(([msgId, msg]) => {
-                    if (msg.date !== currentDate) {
-                        currentDate = msg.date;
-                        container.innerHTML += `<div class="date-badge">${currentDate}</div>`;
-                    }
-                    
-                    const isMe = msg.sender === currentUser.name;
-                    const cssClass = isMe ? 'me' : 'partner';
-                    
-                    let contentHTML = '';
-                    if (msg.type === 'image') {
-                        contentHTML = `<img src="${msg.content}" class="message-image" onclick="viewImage('${msg.content}')">`;
-                    } else if (msg.type === 'audio') {
-                        contentHTML = `<div style="display:flex;align-items:center;gap:10px;"><button onclick="playAudio('${msg.content}', this)" style="width:40px;height:40px;border-radius:50%;background:var(--primary-color);color:white;border:none;">▶️</button><span>${Math.floor(msg.duration/60)}:${(msg.duration%60).toString().padStart(2,'0')}</span></div>`;
-                    } else if (msg.type === 'location') {
-                        contentHTML = `<div onclick="window.open('https://maps.google.com/?q=${msg.lat},${msg.lng}')" style="cursor:pointer;"><div style="font-size:40px;text-align:center;">📍</div><div style="text-align:center;">Konum</div></div>`;
-                    } else {
-                        contentHTML = `<div>${msg.content.replace(/</g, '&lt;')}</div>`;
-                    }
-                    
-                    container.innerHTML += `
-                        <div class="message-wrapper ${cssClass}" data-id="${msgId}">
-                            <div class="message ${cssClass}" oncontextmenu="showContextMenu(event, '${msgId}')">
-                                ${contentHTML}
-                                <div class="message-time">${msg.time} ${isMe ? '<span class="message-status">✓✓</span>' : ''}</div>
-                            </div>
-                        </div>`;
-                });
-                
-                container.scrollTop = container.scrollHeight;
-            });
-        }
-
-        window.playAudio = function(url, btn) {
-            const audio = new Audio(url);
-           3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.93 0 3.5-1.57 3.5-3.5S13.93 53 12 53s-3.5 1.57-3.5 3.5S10.07 60 12 60z' fill='%23000' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E");
-            pointer-events: none;
-            z-index: 0;
-        }
-        
-        .login-screen {
-            position: fixed;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-            padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
-        }
-        .login-box {
-            background: rgba(255,255,255,0.95);
-            padding: 40px;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            max-width: 350px;
-            width: 90%;
-            animation: fadeIn 0.5s;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .login-box h1 { font-size: 60px; margin-bottom: 10px; animation: heartbeat 1.5s infinite; }
-        @keyframes heartbeat {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-        }
-        .subtitle { color: #666; font-size: 18px; margin-bottom: 30px; font-weight: 600; }
-        .day-counter {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            padding: 20px;
-            border-radius: 15px;
-            margin-bottom: 25px;
-        }
-        .day-counter .number { font-size: 48px; font-weight: bold; }
-        .day-counter .label { font-size: 14px; opacity: 0.9; }
-        .password-input-wrapper {
-            position: relative;
-            margin-bottom: 20px;
-        }
-        .password-input-wrapper input {
-            width: 100%;
-            padding: 15px 45px 15px 15px;
-            border: 2px solid #ddd;
-            border-radius: 10px;
-            font-size: 16px;
-            transition: border-color 0.3s;
-            -webkit-appearance: none;
-        }
-        .password-input-wrapper input:focus {
-            outline: none;
-            border-color: #667eea;
-            border-width: 2px;
-        }
-        .toggle-password {
-            position: absolute;
-            right: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 18px;
-            color: #666;
-            padding: 5px;
-        }
-        .login-btn {
-            width: 100%;
-            padding: 15px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            border: none;
-            border-radius: 10px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s;
-            -webkit-appearance: none;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
-        }
-        .login-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
-        }
-        .login-btn:active { transform: translateY(0) scale(0.98); }
-        .shake { animation: shake 0.5s; }
-        @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            25% { transform: translateX(-10px); }
-            75% { transform: translateX(10px); }
-        }
-        .error-text {
-            color: #e74c3c;
-            font-size: 14px;
-            margin-top: 10px;
-            display: none;
-        }
-        
-        .chat-screen {
-            display: none;
-            flex-direction: column;
-            height: 100%;
-            height: 100vh;
-            height: -webkit-fill-available;
-            position: relative;
-            z-index: 1;
-            padding-bottom: env(safe-area-inset-bottom);
-        }
-        .header {
-            background: var(--header-bg);
-            color: white;
-            padding: 10px 16px;
-            padding-top: max(10px, env(safe-area-inset-top));
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            flex-shrink: 0;
-        }
-        .back-btn {
-            font-size: 24px;
-            cursor: pointer;
-            padding: 5px;
-            background: none;
-            border: none;
-            color: white;
-        }
-        .profile-photo {
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            overflow: hidden;
-            flex-shrink: 0;
-        }
-        .profile-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .profile-photo span { font-size: 24px; }
-        .header-info { flex: 1; min-width: 0; }
-        .header-info h2 {
-            color: #fff;
-            font-size: 17px;
-            font-weight: 600;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        .header-info p {
-            color: var(--secondary-text);
-            font-size: 13px;
-        }
-        .typing-indicator { color: #53bdeb !important; font-style: italic; }
-        .header-actions {
-            display: flex;
-            gap: 10px;
-            flex-shrink: 0;
-        }
-        .header-btn {
-            color: white;
-            font-size: 20px;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 5px;
-        }
-        
-        .messages {
-            flex: 1;
-            overflow-y: auto;
-            overflow-x: hidden;
-            padding: 20px 12px;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            -webkit-overflow-scrolling: touch;
-        }
-        .date-badge {
-            align-self: center;
-            background: rgba(0,0,0,0.2);
-            color: rgba(255,255,255,0.8);
-            padding: 6px 12px;
-            border-radius: 15px;
-            font-size: 12px;
-            margin: 10px 0;
-        }
-        .message-wrapper {
-            display: flex;
-            flex-direction: column;
-            max-width: 80%;
-            position: relative;
-            animation: fadeIn 0.3s;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .message-wrapper.me { align-self: flex-end; }
-        .message-wrapper.partner { align-self: flex-start; }
-        .message {
-            padding: 8px 12px;
-            border-radius: 8px;
-            word-wrap: break-word;
-            font-size: 15px;
-            line-height: 1.4;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-            cursor: pointer;
-        }
-        .message.me {
-            background: var(--message-me);
-            color: var(--text-color);
-            border-bottom-right-radius: 2px;
-        }
-        .message.partner {
-            background: var(--message-partner);
-            color: var(--text-color);
-            border-bottom-left-radius: 2px;
-        }
-        .message-image {
-            max-width: 100%;
-            border-radius: 8px;
-            margin-bottom: 4px;
-            cursor: pointer;
-            display: block;
-        }
-        .message-time {
-            font-size: 11px;
-            color: rgba(0,0,0,0.5);
-            text-align: right;
-            margin-top: 2px;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            gap: 3px;
-        }
-        .message-status { color: #53bdeb; font-size: 14px; }
-        
-        .input-area {
-            background: var(--input-bg);
-            padding: 10px 12px;
-            padding-bottom: max(10px, env(safe-area-inset-bottom));
-            display: flex;
-            align-items: flex-end;
-            gap: 8px;
-            border-top: 1px solid rgba(0,0,0,0.1);
-            flex-shrink: 0;
-        }
-        .input-btn {
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            border: none;
-            background: none;
-            color: #54656F;
-            font-size: 24px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            -webkit-appearance: none;
-        }
-        .input-btn.recording {
-            background: #ff4444;
-            color: white;
-            animation: pulse 1s infinite;
-        }
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-        }
-        .input-wrapper { flex: 1; display: flex; flex-direction: column; }
-        .input-container {
-            background: #fff;
-            border-radius: 25px;
-            padding: 10px 15px;
-            display: flex;
-            align-items: center;
-        }
-        .message-input {
-            flex: 1;
-            border: none;
-            background: none;
-            font-size: 16px;
-            outline: none;
-            color: var(--text-color);
-            -webkit-appearance: none;
-        }
-        .send-btn {
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            background: var(--primary-color);
-            color: white;
-            border: none;
-            font-size: 20px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            -webkit-appearance: none;
-        }
-        .send-btn:active { transform: scale(0.95); }
-        
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: rgba(0,0,0,0.8);
-            z-index: 2000;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-        .modal.active { display: flex; }
-        .modal-content {
-            background: #fff;
-            border-radius: 20px;
-            padding: 30px;
-            text-align: center;
-            max-width: 350px;
-            width: 100%;
-            animation: slideUp 0.3s;
-        }
-        @keyframes slideUp {
-            from { transform: translateY(50px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-        .modal-btn {
-            width: 100%;
-            padding: 15px;
-            margin: 8px 0;
-            border: none;
-            border-radius: 10px;
-            font-size: 16px;
-            cursor: pointer;
-            -webkit-appearance: none;
-        }
-        .modal-btn.primary { background: var(--primary-color); color: white; }
-        .modal-btn.secondary { background: #f0f0f0; color: #333; }
-        
-        .context-menu {
-            position: fixed;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-            padding: 10px 0;
-            z-index: 3000;
-            display: none;
-            min-width: 150px;
-        }
-        .context-menu.active { display: block; }
-        .context-item {
-            padding: 12px 20px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .context-item:hover { background: rgba(0,0,0,0.05); }
-        
-        .recording-overlay {
-            display: none;
-            position: fixed;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0,0,0,0.8);
-            z-index: 2500;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-        .recording-overlay.active { display: flex; }
-        .recording-circle {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            background: #ff4444;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 40px;
-            color: white;
-            animation: recordingPulse 1s infinite;
-        }
-        @keyframes recordingPulse {
-            0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,68,68,0.7); }
-            50% { transform: scale(1.1); box-shadow: 0 0 0 20px rgba(255,68,68,0); }
-        }
-        .recording-time {
-            color: white;
-            font-size: 24px;
-            margin-top: 20px;
-            font-family: monospace;
-        }
-        
-        .contact-panel {
-            position: fixed;
-            top: 0; right: -100%;
-            width: 100%; max-width: 400px;
-            height: 100%;
-            background: var(--bg-color);
-            z-index: 1500;
-            transition: right 0.3s;
-            display: flex;
-            flex-direction: column;
-        }
-        .contact-panel.active { right: 0; }
-        .contact-header {
-            background: var(--header-bg);
-            color: white;
-            padding: 20px;
-            padding-top: max(20px, env(safe-area-inset-top));
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        .contact-avatar {
-            width: 80px; height: 80px;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 40px;
-        }
-        
-        .image-viewer {
-            display: none;
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: rgba(0,0,0,0.95);
-            z-index: 3000;
-            justify-content: center;
-            align-items: center;
-        }
-        .image-viewer.active { display: flex; }
-        .image-viewer img {
-            max-width: 90%;
-            max-height: 80%;
-            border-radius: 10px;
-        }
-        .image-viewer-close {
-            position: absolute;
-            top: max(20px, env(safe-area-inset-top));
-            right: 20px;
-            color: white;
-            font-size: 30px;
-            background: none;
-            border: none;
-            cursor: pointer;
-        }
-        
-        .toast {
-            position: fixed;
-            bottom: 100px;
-            left: 50%;
-            transform: translateX(-50%) translateY(100px);
-            background: rgba(0,0,0,0.8);
-            color: white;
-            padding: 12px 24px;
-            border-radius: 25px;
-            font-size: 14px;
-            z-index: 4000;
-            opacity: 0;
-            transition: all 0.3s;
-            pointer-events: none;
-        }
-        .toast.show {
-            transform: translateX(-50%) translateY(0);
-            opacity: 1;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="bg-pattern"></div>
-        
-        <!-- LOGIN SCREEN -->
-        <div class="login-screen" id="loginScreen">
-            <div class="login-box">
-                <h1>💕</h1>
-                <p class="subtitle">Berat ❤️ Enes</p>
-                <div class="day-counter">
-                    <div class="number" id="dayCount">0</div>
-                    <div class="label">gündür birlikteyiz</div>
-                    <div style="color: rgba(255,255,255,0.6); font-size: 12px; margin-top: 8px;">9 Ocak 2025'ten beri</div>
-                </div>
-                <div class="password-input-wrapper">
-                    <input type="password" id="passwordInput" placeholder="Şifrenizi girin" autocomplete="off">
-                    <button class="toggle-password" onclick="togglePassword()">👁️</button>
-                </div>
-                <button class="login-btn" onclick="login()">Giriş Yap</button>
-                <p class="error-text" id="errorText">Şifre hatalı!</p>
-            </div>
-        </div>
-        
-        <!-- CHAT SCREEN -->
-        <div class="chat-screen" id="chatScreen">
-            <div class="header">
-                <button class="back-btn" onclick="logout()">←</button>
-                <div class="profile-photo" id="profilePhoto" onclick="showContactInfo()">
-                    <span>💕</span>
-                </div>
-                <div class="header-info">
-                    <h2 onclick="changePartnerName()">
-                        <span id="partnerNameDisplay">...</span>
-                        <span style="font-size: 12px;">✏️</span>
-                    </h2>
-                    <p id="statusText">çevrimiçi</p>
-                </div>
-                <div class="header-actions">
-                    <button class="header-btn" onclick="toggleTheme()">🌓</button>
-                    <button class="header-btn" onclick="clearChat()">🗑️</button>
-                    <button class="header-btn" onclick="showContactInfo()">ℹ️</button>
-                </div>
-            </div>
-            
-            <div class="messages" id="messages"></div>
-            
-            <div class="input-area">
-                <button class="input-btn" onclick="openAttachmentModal()">📎</button>
-                <div class="input-wrapper">
-                    <div class="input-container">
-                        <input type="text" class="message-input" id="messageInput" placeholder="Mesaj yaz..." onkeypress="handleKeyPress(event)">
-                    </div>
-                </div>
-                <button class="input-btn" id="micBtn" ontouchstart="startRecording()" ontouchend="stopRecording()" onmousedown="startRecording()" onmouseup="stopRecording()">🎤</button>
-                <button class="send-btn" onclick="sendMessage()">➤</button>
-            </div>
-        </div>
-        
-        <!-- CONTACT PANEL -->
-        <div class="contact-panel" id="contactPanel">
-            <div class="contact-header">
-                <button onclick="closeContactInfo()" style="background: none; border: none; color: white; font-size: 24px; cursor: pointer;">✕</button>
-                <div style="flex: 1;"></div>
-            </div>
-            <div style="background: var(--header-bg); padding: 0 20px 30px; text-align: center;">
-                <div class="contact-avatar" id="contactAvatar">
-                    <span style="font-size: 40px;">💕</span>
-                </div>
-                <h2 style="color: white; margin-top: 15px;" id="contactName">...</h2>
-                <p style="color: rgba(255,255,255,0.7);">+90 5XX XXX XX XX</p>
-            </div>
-            <div style="flex: 1; padding: 20px;">
-                <button class="modal-btn danger" onclick="clearChat()" style="margin-top: 20px;">🗑️ Sohbeti Temizle</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- MODALS -->
-    <div class="modal" id="attachmentModal">
-        <div class="modal-content">
-            <h3 style="margin-bottom: 20px;">Dosya Gönder</h3>
-            <button class="modal-btn primary" onclick="document.getElementById('fileInput').click()">🖼️ Galeriden Seç</button>
-            <button class="modal-btn primary" onclick="sendLocation()">📍 Konum Paylaş</button>
-            <button class="modal-btn secondary" onclick="closeAttachmentModal()">İptal</button>
-        </div>
-    </div>
-
-    <div class="modal" id="nameModal">
-        <div class="modal-content">
-            <h3 style="margin-bottom: 20px;">İsim Değiştir</h3>
-            <input type="text" id="nameInput" placeholder="Yeni isim..." style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 10px; font-size: 16px; margin-bottom: 15px;">
-            <button class="modal-btn primary" onclick="savePartnerName()">Kaydet</button>
-            <button class="modal-btn secondary" onclick="closeNameModal()">İptal</button>
-        </div>
-    </div>
-
-    <div class="recording-overlay" id="recordingOverlay">
-        <div class="recording-circle">🎙️</div>
-        <div class="recording-time" id="recordingTime">00:00</div>
-        <div style="color: rgba(255,255,255,0.7); margin-top: 10px;">Bırakmak için bırakın</div>
-    </div>
-
-    <div class="image-viewer" id="imageViewer" onclick="closeImageViewer()">
-        <button class="image-viewer-close">✕</button>
-        <img id="viewerImage" src="" alt="">
-    </div>
-
-    <div class="context-menu" id="contextMenu">
-        <div class="context-item" onclick="replyToMessage()">💬 Yanıtla</div>
-        <div class="context-item" onclick="deleteMessage()" style="color: #ff4444;">🗑️ Sil</div>
-    </div>
-
-    <div class="toast" id="toast"></div>
-
-    <input type="file" id="fileInput" accept="image/*" style="display: none;" onchange="handleImageUpload(event)">
-
-    <!-- FIREBASE & APP LOGIC -->
-    <script type="module">
-        // FIREBASE IMPORT
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-        import { getDatabase, ref, push, onValue, remove, set, update } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
-
-        console.log("Script başladı!");
-
-        // CONFIG
-        const firebaseConfig = {
-            apiKey: "AIzaSyBZYnpMlDoz2wnk9PnPrSr_usoSSq8Xkow",
-            authDomain: "berat-enes-sohbet.firebaseapp.com",
-            databaseURL: "https://berat-enes-sohbet-default-rtdb.europe-west1.firebasedatabase.app",
-            projectId: "berat-enes-sohbet",
-            storageBucket: "berat-enes-sohbet.appspot.com",
-            messagingSenderId: "661287110483",
-            appId: "1:661287110483:web:9bb02c8cd560dea964c3a6"
-        };
-
-        // INIT FIREBASE
-        let app, db;
-        try {
-            app = initializeApp(firebaseConfig);
-            db = getDatabase(app);
-            console.log("Firebase bağlandı!");
-        } catch (e) {
-            console.error("Firebase hatası:", e);
-            alert("İnternet bağlantınızı kontrol edin!");
-        }
-
-        // GLOBAL VARS
-        let currentUser = null;
-        let messagesRef = null;
-        let typingRef = null;
-        let selectedMessage = null;
-        let recordingInterval = null;
-        let recordingSeconds = 0;
-        let mediaRecorder = null;
-        let audioChunks = [];
-
-        const USERS = {
-            'berat1': { name: 'Berat', partner: 'Enes', theme: { primary: '#128C7E', headerBg: '#075E54', messageMe: '#DCF8C6' }},
-            'enes1': { name: 'Enes', partner: 'Berat', theme: { primary: '#EE5A6F', headerBg: '#EE5A6F', messageMe: '#FFD4D4' }}
-        };
-
-        // GÜN SAYACI
-        const startDate = new Date('2025-01-09');
-        const today = new Date();
-        const days = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
-        document.getElementById('dayCount').textContent = days;
-
-        // ŞİFRE GÖSTER/GİZLE
-        window.togglePassword = function() {
-            const input = document.getElementById('passwordInput');
-            const btn = document.querySelector('.toggle-password');
-            if (input.type === 'password') {
-                input.type = 'text';
-                btn.textContent = '🙈';
-            } else {
-                input.type = 'password';
-                btn.textContent = '👁️';
-            }
-        };
-
-        // LOGIN - DÜZELTİLMİŞ
-        window.login = function() {
-            console.log("Login tıklandı!");
-            
-            const input = document.getElementById('passwordInput');
-            const password = input.value.toLowerCase().trim();
-            const loginBox = document.querySelector('.login-box');
-            const errorText = document.getElementById('errorText');
-            
-            console.log("Girilen şifre:", password);
-            
-            // Şifre kontrolü
-            if (!USERS[password]) {
-                console.log("Şifre yanlış!");
-                loginBox.classList.add('shake');
-                errorText.style.display = 'block';
-                setTimeout(() => {
-                    loginBox.classList.remove('shake');
-                    errorText.style.display = 'none';
-                    input.value = '';
-                }, 1000);
-                return;
-            }
-            
-            console.log("Şifre doğru! Kullanıcı:", USERS[password].name);
-            
-            // Kullanıcı ayarla
-            currentUser = USERS[password];
-            
-            // Firebase referansları
-            messagesRef = ref(db, "mesajlar");
-            typingRef = ref(db, "typing/" + currentUser.name);
-            
-            // Temayı uygula
-            const theme = currentUser.theme;
-            document.documentElement.style.setProperty('--primary-color', theme.primary);
-            document.documentElement.style.setProperty('--header-bg', theme.headerBg);
-            document.documentElement.style.setProperty('--message-me', theme.messageMe);
-            
-            // Karanlık mod kontrolü
-            if (localStorage.getItem('darkMode') === 'true') {
-                document.body.setAttribute('data-theme', 'dark');
-            }
-            
-            // Kayıtlı ismi yükle
-            const savedName = localStorage.getItem('partnerName_' + currentUser.name);
-            if (savedName) {
-                currentUser.partner = savedName;
-            }
-            
-            // Ekranları değiştir
-            document.getElementById('loginScreen').style.display = 'none';
-            document.getElementById('chatScreen').style.display = 'flex';
-            
-            // İsimleri göster
-            document.getElementById('partnerNameDisplay').textContent = currentUser.partner;
-            document.getElementById('contactName').textContent = currentUser.partner;
-            
-            // Mesajları yükle
-            loadMessages();
-            setupTypingListener();
-            
-            console.log("Giriş başarılı!");
-            showToast('Hoş geldin ' + currentUser.name + '!');
-        };
-
-        // ENTER İLE GİRİŞ
-        document.getElementById('passwordInput').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                login();
             }
         });
-
-        // LOGOUT
-        window.logout = function() {
-            if (typingRef) set(typingRef, false);
-            currentUser = null;
-            messagesRef = null;
-            typingRef = null;
-            document.getElementById('chatScreen').style.display = 'none';
-            document.getElementById('loginScreen').style.display = 'flex';
-            document.getElementById('passwordInput').value = '';
-        };
-
-        // PARTNER İSİM DEĞİŞTİRME
-        window.changePartnerName = function() {
-            if (!currentUser) return;
-            document.getElementById('nameInput').value = currentUser.partner;
-            document.getElementById('nameModal').classList.add('active');
-        };
-
-        window.savePartnerName = function() {
-            const newName = document.getElementById('nameInput').value.trim();
-            if (newName && currentUser) {
-                currentUser.partner = newName;
-                localStorage.setItem('partnerName_' + currentUser.name, newName);
-                document.getElementById('partnerNameDisplay').textContent = newName;
-                document.getElementById('contactName').textContent = newName;
-                showToast('İsim değiştirildi!');
-            }
-            document.getElementById('nameModal').classList.remove('active');
-        };
-
-        window.closeNameModal = function() {
-            document.getElementById('nameModal').classList.remove('active');
-        };
-
-        // TEMA DEĞİŞTİRME
-        window.toggleTheme = function() {
-            const isDark = document.body.getAttribute('data-theme') === 'dark';
-            if (isDark) {
-                document.body.removeAttribute('data-theme');
-                localStorage.setItem('darkMode', 'false');
-            } else {
-                document.body.setAttribute('data-theme', 'dark');
-                localStorage.setItem('darkMode', 'true');
-            }
-        };
-
-        // YAZIYOR... GÖSTERGESİ
-        let typingTimeout;
-        window.handleTyping = function() {
-            if (!currentUser || !typingRef) return;
-            set(typingRef, true);
-            clearTimeout(typingTimeout);
-            typingTimeout = setTimeout(() => {
-                if (typingRef) set(typingRef, false);
-            }, 3000);
-        };
-
-        function setupTypingListener() {
-            if (!currentUser) return;
-            const partnerTypingRef = ref(db, "typing/" + currentUser.partner);
-            onValue(partnerTypingRef, (snapshot) => {
-                const isTyping = snapshot.val();
-                const statusText = document.getElementById('statusText');
-                if (isTyping) {
-                    statusText.textContent = 'yazıyor...';
-                    statusText.classList.add('typing-indicator');
-                } else {
-                    statusText.textContent = 'çevrimiçi';
-                    statusText.classList.remove('typing-indicator');
-                }
-            });
-        }
-
-        // MESAJ GÖNDERME
-        window.sendMessage = function() {
-            const input = document.getElementById('messageInput');
-            const text = input.value.trim();
-            
-            if (!text) return;
-            if (!currentUser) {
-                showToast('Önce giriş yapın!');
-                return;
-            }
-            
-            try {
-                push(messagesRef, {
-                    sender: currentUser.name,
-                    type: 'text',
-                    content: text,
-                    time: new Date().toLocaleTimeString('tr-TR', {hour: '2-digit', minute:'2-digit'}),
-                    date: new Date().toLocaleDateString('tr-TR'),
-                    timestamp: Date.now()
-                });
-                
-                input.value = '';
-                if (typingRef) set(typingRef, false);
-                input.blur();
-            } catch (e) {
-                console.error("Mesaj hatası:", e);
-                showToast('Mesaj gönderilemedi!');
-            }
-        };
-
-        // ENTER İLE MESAJ
-        window.handleKeyPress = function(e) {
-            if (e.key === 'Enter') {
-                sendMessage();
-            }
-        };
-
-        // SESLİ MESAJ
-        window.startRecording = async function() {
-            if (!currentUser) {
-                showToast('Önce giriş yapın!');
-                return;
-            }
-            
-            try {
-                const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-                mediaRecorder = new MediaRecorder(stream);
-                audioChunks = [];
-                
-                mediaRecorder.ondataavailable = (e) => audioChunks.push(e.data);
-                mediaRecorder.onstop = () => {
-                    const audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
-                    const reader = new FileReader();
-                    reader.onload = (e) => {
-                        push(messagesRef, {
-                            sender: currentUser.name,
-                            type: 'audio',
-                            content: e.target.result,
-                            duration: recordingSeconds,
-                            time: new Date().toLocaleTimeString('tr-TR', {hour: '2-digit', minute:'2-digit'}),
-                            date: new Date().toLocaleDateString('tr-TR'),
-                            timestamp: Date.now()
-                        });
-                    };
-                    reader.readAsDataURL(audioBlob);
-                };
-                
-                mediaRecorder.start();
-                recordingSeconds = 0;
-                document.getElementById('recordingOverlay').classList.add('active');
-                document.getElementById('micBtn').classList.add('recording');
-                
-                recordingInterval = setInterval(() => {
-                    recordingSeconds++;
-                    const mins = Math.floor(recordingSeconds / 60).toString().padStart(2, '0');
-                    const secs = (recordingSeconds % 60).toString().padStart(2, '0');
-                    document.getElementById('recordingTime').textContent = `${mins}:${secs}`;
-                }, 1000);
-            } catch (err) {
-                showToast('Mikrofon erişimi reddedildi');
-            }
-        };
-
-        window.stopRecording = function() {
-            if (!mediaRecorder) return;
-            clearInterval(recordingInterval);
-            mediaRecorder.stop();
-            mediaRecorder.stream.getTracks().forEach(track => track.stop());
-            document.getElementById('recordingOverlay').classList.remove('active');
-            document.getElementById('micBtn').classList.remove('recording');
-            mediaRecorder = null;
-        };
+        document.getElementById('messageInput').addEventListener('input', handleTyping);
 
         // KONUM
-        window.sendLocation = function() {
+        function sendLocation() {
             if (!currentUser) {
                 showToast('Önce giriş yapın!');
                 return;
@@ -2168,8 +767,8 @@
             }
             
             navigator.geolocation.getCurrentPosition(
-                (position) => {
-                    push(messagesRef, {
+                function(position) {
+                    messagesRef.push({
                         sender: currentUser.name,
                         type: 'location',
                         lat: position.coords.latitude,
@@ -2181,26 +780,28 @@
                     closeAttachmentModal();
                     showToast('Konum paylaşıldı');
                 },
-                () => showToast('Konum alınamadı')
+                function() {
+                    showToast('Konum alınamadı');
+                }
             );
-        };
+        }
 
-        // DOSYA EKLEME
-        window.openAttachmentModal = function() {
+        // DOSYA
+        function openAttachmentModal() {
             document.getElementById('attachmentModal').classList.add('active');
-        };
+        }
 
-        window.closeAttachmentModal = function() {
+        function closeAttachmentModal() {
             document.getElementById('attachmentModal').classList.remove('active');
-        };
+        }
 
-        window.handleImageUpload = function(event) {
-            const file = event.target.files[0];
+        function handleImageUpload(event) {
+            var file = event.target.files[0];
             if (!file || !currentUser) return;
             
-            const reader = new FileReader();
-            reader.onload = (e) => {
-                push(messagesRef, {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                messagesRef.push({
                     sender: currentUser.name,
                     type: 'image',
                     content: e.target.result,
@@ -2211,135 +812,133 @@
             };
             reader.readAsDataURL(file);
             closeAttachmentModal();
-        };
+        }
 
         // MESAJLARI YÜKLE
         function loadMessages() {
             if (!messagesRef) return;
             
-            onValue(messagesRef, (snapshot) => {
-                const container = document.getElementById('messages');
+            messagesRef.on('value', function(snapshot) {
+                var container = document.getElementById('messages');
                 container.innerHTML = '';
-                const data = snapshot.val();
+                var data = snapshot.val();
                 
                 if (!data) {
                     container.innerHTML = '<div style="text-align: center; color: #666; padding: 60px 20px;"><div style="font-size: 60px; margin-bottom: 20px;">💕</div><h3>Mesajlaşmaya başlayın</h3></div>';
                     return;
                 }
 
-                let currentDate = '';
-                Object.entries(data).sort((a,b) => a[1].timestamp - b[1].timestamp).forEach(([msgId, msg]) => {
-                    if (msg.date !== currentDate) {
-                        currentDate = msg.date;
-                        container.innerHTML += `<div class="date-badge">${currentDate}</div>`;
+                var currentDate = '';
+                var messages = [];
+                
+                // Object'i array'e çevir ve sırala
+                for (var key in data) {
+                    if (data.hasOwnProperty(key)) {
+                        messages.push({key: key, data: data[key]});
+                    }
+                }
+                messages.sort(function(a, b) {
+                    return a.data.timestamp - b.data.timestamp;
+                });
+                
+                messages.forEach(function(msg) {
+                    var msgData = msg.data;
+                    var msgId = msg.key;
+                    
+                    if (msgData.date !== currentDate) {
+                        currentDate = msgData.date;
+                        container.innerHTML += '<div class="date-badge">' + currentDate + '</div>';
                     }
                     
-                    const isMe = msg.sender === currentUser.name;
-                    const cssClass = isMe ? 'me' : 'partner';
+                    var isMe = msgData.sender === currentUser.name;
+                    var cssClass = isMe ? 'me' : 'partner';
                     
-                    let contentHTML = '';
-                    if (msg.type === 'image') {
-                        contentHTML = `<img src="${msg.content}" class="message-image" onclick="viewImage('${msg.content}')">`;
-                    } else if (msg.type === 'audio') {
-                        contentHTML = `<div style="display:flex;align-items:center;gap:10px;"><button onclick="playAudio('${msg.content}', this)" style="width:40px;height:40px;border-radius:50%;background:var(--primary-color);color:white;border:none;">▶️</button><span>${Math.floor(msg.duration/60)}:${(msg.duration%60).toString().padStart(2,'0')}</span></div>`;
-                    } else if (msg.type === 'location') {
-                        contentHTML = `<div onclick="window.open('https://maps.google.com/?q=${msg.lat},${msg.lng}')" style="cursor:pointer;"><div style="font-size:40px;text-align:center;">📍</div><div style="text-align:center;">Konum</div></div>`;
+                    var contentHTML = '';
+                    if (msgData.type === 'image') {
+                        contentHTML = '<img src="' + msgData.content + '" class="message-image" onclick="viewImage(\'' + msgData.content + '\')">';
+                    } else if (msgData.type === 'location') {
+                        contentHTML = '<div onclick="window.open(\'https://maps.google.com/?q=' + msgData.lat + ',' + msgData.lng + '\')" style="cursor:pointer;"><div style="font-size:40px;text-align:center;">📍</div><div style="text-align:center;">Konum</div></div>';
                     } else {
-                        contentHTML = `<div>${msg.content.replace(/</g, '&lt;')}</div>`;
+                        contentHTML = '<div>' + msgData.content.replace(/</g, '&lt;') + '</div>';
                     }
                     
-                    container.innerHTML += `
-                        <div class="message-wrapper ${cssClass}" data-id="${msgId}">
-                            <div class="message ${cssClass}" oncontextmenu="showContextMenu(event, '${msgId}')">
-                                ${contentHTML}
-                                <div class="message-time">${msg.time} ${isMe ? '<span class="message-status">✓✓</span>' : ''}</div>
-                            </div>
-                        </div>`;
+                    container.innerHTML += 
+                        '<div class="message-wrapper ' + cssClass + '" data-id="' + msgId + '" oncontextmenu="showContextMenu(event, \'' + msgId + '\')">' +
+                            '<div class="message ' + cssClass + '">' +
+                                contentHTML +
+                                '<div class="message-time">' + msgData.time + (isMe ? ' <span class="message-status">✓✓</span>' : '') + '</div>' +
+                            '</div>' +
+                        '</div>';
                 });
                 
                 container.scrollTop = container.scrollHeight;
             });
         }
 
-        window.playAudio = function(url, btn) {
-            const audio = new Audio(url);
-            audio.play();
-            btn.textContent = '⏸️';
-            audio.onended = () => btn.textContent = '▶️';
-        };
-
-        window.viewImage = function(url) {
+        function viewImage(url) {
             document.getElementById('viewerImage').src = url;
             document.getElementById('imageViewer').classList.add('active');
-        };
+        }
 
-        window.closeImageViewer = function() {
+        function closeImageViewer() {
             document.getElementById('imageViewer').classList.remove('active');
-        };
+        }
 
-        // CONTEXT MENU
-        window.showContextMenu = function(e, msgId) {
+        function showContextMenu(e, msgId) {
             e.preventDefault();
             selectedMessage = msgId;
-            const menu = document.getElementById('contextMenu');
+            var menu = document.getElementById('contextMenu');
             menu.style.left = Math.min(e.pageX, window.innerWidth - 150) + 'px';
             menu.style.top = Math.min(e.pageY, window.innerHeight - 100) + 'px';
             menu.classList.add('active');
-        };
+        }
 
-        document.addEventListener('click', (e) => {
+        document.addEventListener('click', function(e) {
             if (!e.target.closest('.context-menu')) {
                 document.getElementById('contextMenu').classList.remove('active');
             }
         });
 
-        window.replyToMessage = function() {
+        function replyToMessage() {
             document.getElementById('contextMenu').classList.remove('active');
             showToast('Yanıtlama aktif');
-        };
+        }
 
-        window.deleteMessage = function() {
+        function deleteMessage() {
             if (!selectedMessage) return;
             if (confirm('Bu mesajı silmek istiyor musunuz?')) {
-                remove(ref(db, `mesajlar/${selectedMessage}`));
+                db.ref('mesajlar/' + selectedMessage).remove();
                 showToast('Mesaj silindi');
             }
             document.getElementById('contextMenu').classList.remove('active');
-        };
+        }
 
-        // SOHBET TEMİZLEME
-        window.clearChat = function() {
+        function clearChat() {
             if (!currentUser) return;
             if (confirm('Tüm sohbet silinsin mi?')) {
-                remove(messagesRef);
+                messagesRef.remove();
                 showToast('Sohbet temizlendi');
             }
-        };
+        }
 
-        // İLETİŞİM BİLGİLERİ
-        window.showContactInfo = function() {
+        function showContactInfo() {
             document.getElementById('contactPanel').classList.add('active');
-        };
+        }
 
-        window.closeContactInfo = function() {
+        function closeContactInfo() {
             document.getElementById('contactPanel').classList.remove('active');
-        };
+        }
 
-        // TOAST
         function showToast(message) {
-            const toast = document.getElementById('toast');
+            var toast = document.getElementById('toast');
             toast.textContent = message;
             toast.classList.add('show');
-            setTimeout(() => toast.classList.remove('show'), 3000);
+            setTimeout(function() {
+                toast.classList.remove('show');
+            }, 3000);
         }
 
-        // Input event listener
-        const msgInput = document.getElementById('messageInput');
-        if (msgInput) {
-            msgInput.addEventListener('input', handleTyping);
-        }
-
-        console.log("Tüm fonksiyonlar yüklendi!");
+        console.log("Tüm scriptler yüklendi!");
     </script>
 </body>
 </html>
